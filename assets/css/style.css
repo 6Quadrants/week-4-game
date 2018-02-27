@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+.crystalsrow {
+    max-width: 70%;
+    margin: auto;
+
+}
+
+img.crystals {
+    max-width: 100%;
+}
+
