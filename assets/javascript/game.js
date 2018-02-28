@@ -1,8 +1,7 @@
   var wins = 0;
   var losses = 0;
 
-
-var randomNumber = 0;
+  var randomNumber = 0;
 var totalScore = 0;
 
 var blueValue = "";
@@ -10,7 +9,11 @@ var yellowValue = "";
 var greenValue = "";
 var redValue = "";
 
+
+
 $(document).ready(function() {
+    
+    
 
     var minNumber = 19;
     var maxNumber = 120;
@@ -61,7 +64,30 @@ $(document).ready(function() {
 
         else if (totalScore === randomNumber) {
             wins++;
-            $("#wins").append(wins);
+            $("#wins").html(wins);
+        }
+
+        console.log(wins);
+        console.log(losses);
+
+    });
+        
+   
+   
+
+    $("#blue").on("click", function() {
+
+        totalScore += blueValue;
+        $("#yourscore").html(totalScore);
+        
+        if (totalScore > randomNumber) {  
+            losses++;
+            $("#losses").html(losses);
+        }
+
+        else if (totalScore === randomNumber) {
+            wins++;
+            $("#wins").html(wins);
         }
 
         console.log(wins);
@@ -69,81 +95,47 @@ $(document).ready(function() {
 
     });
 
-    $("#blue").on("click", function() {
+    $("#green").on("click", function() {
 
-        totalScore += blueValue;
+        totalScore += greenValue;
         $("#yourscore").html(totalScore);
-
-
-        if (totalScore > randomNumber) {
+        
+        if (totalScore > randomNumber) {  
             losses++;
             $("#losses").html(losses);
         }
 
         else if (totalScore === randomNumber) {
             wins++;
-            alert("you win!");
+            $("#wins").html(wins);
         }
 
+        console.log(wins);
+        console.log(losses);
 
-
-        $("#wins").append(wins);
-        $("#losses").append(losses);
-    });
-
-    $("#green").on("click", function() {
-        totalScore += greenValue;
-        $("#yourscore").html(totalScore);
-
-        // var wins = "";
-        // var losses = "";
-
-        var wins = 0;
-        var losses = 0;
-        
-        // $("#wins").html(wins);
-        // $("#losses").val(losses++);
-
-        if (totalScore > randomNumber) {
-            losses++;
-            alert("you lose!");
-        }
-
-        else if (totalScore === randomNumber) {
-            wins++;
-            alert("you win!");
-        }
-        $("#wins").append(wins);
-        $("#losses").append(losses);
     });
 
     $("#yellow").on("click", function() {
+
         totalScore += yellowValue;
         $("#yourscore").html(totalScore);
-
-        // var wins = "";
-        // var losses = "";
-
-        var wins = 0;
-        var losses = 0;
         
-        // $("#wins").html(wins);
-        // $("#losses").val(losses++);
-
-        if (totalScore > randomNumber) {
+        if (totalScore > randomNumber) {  
             losses++;
-            alert("you lose!");
+            $("#losses").html(losses);
         }
 
         else if (totalScore === randomNumber) {
             wins++;
-            alert("you win!");
+            $("#wins").html(wins);
+        }
 
-        }   
-        
-        $("#wins").append(wins);
-        $("#losses").append(losses);
+        console.log(wins);
+        console.log(losses);
+
     });
+
+});
 
 
     // console.log(wins);
@@ -154,7 +146,7 @@ $(document).ready(function() {
     // console.log(greenValue);
     // console.log(yellowValue);
 
-});
+
 
 
     

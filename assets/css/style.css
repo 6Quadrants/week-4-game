@@ -4,15 +4,17 @@
 
 body {
     background-color: #F1F2F2;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 h1.header {
     font-size: 32px;
     font-weight: bolder;
-    text-align: center;
+    /* text-align: center; */
     color: #fff;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
 }
 
 h5 {
@@ -20,20 +22,36 @@ h5 {
 }
 
 p {
-    text-align: center;
+    /* text-align: center; */
     color: #6D6E71;
     padding: 15px;
 
 }
 
 .introtext {
-    background-color: #ffffff;
-    max-width: 60%;
+    /* background-color: #00A6D0; */
+    /* background-color: rgba(210, 241, 249, .85); */
+    max-width: 65%;
     margin: auto;
+    /* border-radius: 5px; */
+    /* box-shadow: 4px 8px 5px rgba(8, 55 ,66, .4); */
 }
 .introheader {
-    background-color: #5CFFAE;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    background-color: #00A6D0;
+    border-top-color: #067B96;
+    border-top-style: solid;
+    border-top-width: 5px;
+}
 
+.introparagraph {
+    background-color: rgba(210, 241, 249, .85);
+    padding-left: 20px;
+    border-top-color: #067B96;
+    border-top-style: solid;
+    border-top-width: 5px;
 }
 
 .cardgray {
@@ -49,11 +67,14 @@ p {
 
 #banner {
     background-image: url("../../assets/images/banner@2x.png");
+    /* background-color: #07C0EA; */
+    background-color: #61CAE2;
+
 }
 
 
 .crystalsrow {
-    max-width: 70%;
+    max-width: 60%;
     margin: auto;
 
 }
