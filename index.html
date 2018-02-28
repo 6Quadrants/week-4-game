@@ -12,41 +12,66 @@
     <title>The Fabulous Game of Clicky Crystals</title>
   </head>
   <body>
-    <div class="jumbotron jumbotron-fluid" id="test">
-                <div class="container">
-                  <h1 class="display-4">The Fabulous Game of Clicky Crystals</h1>
-                  <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    <div class="jumbotron jumbotron-fluid" id="banner">
+                <div class="container my-3">
+                  <div class="introtext">
+                    <div class="introheader">
+                        <h1 class="display-4 header">The Fabulous Game of Clicky Crystals</h1>
+
+                    </div>
+            
+                  <p class="lead">Click on any crystal to begin.<br>
+                  When your total score equals the random number, you win.<br>
+                  If you go over, you lose.</p>
+                </div>
                 </div>
     </div>
     <div class="container mx-auto">
             <div class="row mx-auto">
-                    <div class="col-sm-8">
-                      <div class="card bg-light mb-3">
+                    <div class="col-sm-4">
+                      <div class="card cardgray mb-3">
+                          <div class="card-header">Random Number</div>
+
                         <div class="card-body">
-                          <h5 class="card-title">Random Number</h5>
+                          <!-- <h5 class="card-title">Random Number</h5> -->
                                 <h5 id="total"></h5>
                         </div>
                       </div>
                     </div>
+                   
                     <div class="col-sm-4">
-                      <div class="card bd-secondary mb-3">
-                        <div class="card-body">
-                          <h5 class="card-title" id="youwin"></h5>
-                          <h5 id="wins">Wins:</h5>
-                          <h5 id="losses">Losses:</h5>
-                        </div>
-                      </div>
+                        <div class="card cardgray text-white mb-3">
+                            <div class="card-header">Your Total Score</div>
+                                <div class="card-body">
+                                  <h5 class="card-title" id="yourscore"></h5>
+                                </div>
                     </div>
+                      </div>
+                      <div class="col-sm-4">
+                          <div class="card cardgray mb-3">
+                              <div class="card-header">Score</div>
+
+                            <div class="card-body">
+                              <h5 class="card-title" id="youwin"></h5>
+                              <h5>Wins: <span id="wins"></span></h5>
+                              <!-- <h5 id="wins"></h5> -->
+                              <h5>Losses: <span id="losses"></span></h5>
+                              <!-- <h5 id="losses"></h5> -->
+                              
+                              <!-- <span id="wins"></span> -->
+                            </div>
+                          </div>
+                        </div>
                   </div>
        
-        <div class ="row crystalsrow">
+        <div class ="row crystalsrow my-5">
             <div class="col-md-3" id="blue"><img src="assets/images/blue-crystal@2x.png" class="crystals" value=""></div>
             <div class="col-md-3" id="yellow"><img src="assets/images/yellow-crystal@2x.png" class="crystals" value=""></div>
             <div class="col-md-3" id="green"><img src="assets/images/green-crystal@2x.png" class="crystals" value=""></div>
             <div class="col-md-3" id="red"><img src="assets/images/red-crystal@2x.png" class="crystals" value=""></div>
         </div>
 
-        <div class ="row mx-auto">
+        <!-- <div class ="row mx-auto mt-5">
             <div class="col-sm-6 mx-auto">
             <div class="card text-white bg-info mb-3">
                     <div class="card-header">Your Total Score</div>
@@ -55,7 +80,7 @@
                         </div>
             </div>
             </div>
-        </div>              
+        </div>               -->
         
     </div>
     <!-- Optional JavaScript -->

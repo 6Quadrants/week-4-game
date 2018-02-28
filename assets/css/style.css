@@ -2,6 +2,54 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #F1F2F2;
+}
+
+h1.header {
+    font-size: 32px;
+    font-weight: bolder;
+    text-align: center;
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+h5 {
+    color: #6D6E71;
+}
+
+p {
+    text-align: center;
+    color: #6D6E71;
+    padding: 15px;
+
+}
+
+.introtext {
+    background-color: #ffffff;
+    max-width: 60%;
+    margin: auto;
+}
+.introheader {
+    background-color: #5CFFAE;
+
+}
+
+.cardgray {
+    background-color: #E6E7E8;
+    border: none;
+}
+
+.card-header {
+    color: #6D6E71;
+    background-color: #D1D3D4;
+    border: none;
+}
+
+#banner {
+    background-image: url("../../assets/images/banner@2x.png");
+}
 
 
 .crystalsrow {
@@ -13,4 +61,6 @@
 img.crystals {
     max-width: 100%;
 }
+
+
 

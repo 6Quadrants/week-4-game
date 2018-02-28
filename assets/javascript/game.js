@@ -1,6 +1,8 @@
-$(document).ready(function() {
+  var wins = 0;
+  var losses = 0;
 
-var randomNumber = "";
+
+var randomNumber = 0;
 var totalScore = 0;
 
 var blueValue = "";
@@ -8,9 +10,7 @@ var yellowValue = "";
 var greenValue = "";
 var redValue = "";
 
-wins = 0;
-losses=0;
-
+$(document).ready(function() {
 
     var minNumber = 19;
     var maxNumber = 120;
@@ -41,61 +41,121 @@ losses=0;
     $("#green").val(greenValue);
     $("#red").val(redValue);
 
- 
-
-    $("#red").on("click", function() {
-        totalScore += redValue;
-        $("#yourscore").html(totalScore);
-    });
-
-    $("#blue").on("click", function() {
-        totalScore += blueValue;
-        $("#yourscore").html(totalScore);
-    });
-
-    $("#green").on("click", function() {
-        totalScore += greenValue;
-        $("#yourscore").html(totalScore);
-    });
-
-    $("#yellow").on("click", function() {
-        totalScore += yellowValue;
-        $("#yourscore").html(totalScore);
-    });
-
- 
     blueValue = parseInt(blueValue);
     yellowValue = parseInt(yellowValue);
     greenValue = parseInt(greenValue);
     redValue = parseInt(redValue);
 
-    totalScore = parseInt(totalScore);
-    randomNumber = parseInt(randomNumber);
 
 
 
+    $("#red").on("click", function() {
+
+        totalScore += redValue;
+        $("#yourscore").html(totalScore);
+        
+        if (totalScore > randomNumber) {  
+            losses++;
+            $("#losses").html(losses);
+        }
+
+        else if (totalScore === randomNumber) {
+            wins++;
+            $("#wins").append(wins);
+        }
+
+        console.log(wins);
+        console.log(losses);
+
+    });
+
+    $("#blue").on("click", function() {
+
+        totalScore += blueValue;
+        $("#yourscore").html(totalScore);
 
 
-    if (totalScore > randomNumber) {
-        alert("you lose!");
-    }
+        if (totalScore > randomNumber) {
+            losses++;
+            $("#losses").html(losses);
+        }
 
-    else if (totalScore === randomNumber) {
-        alert("you win!");
-    }
-   
+        else if (totalScore === randomNumber) {
+            wins++;
+            alert("you win!");
+        }
 
-    console.log(redValue);
-    console.log(blueValue);
-    console.log(greenValue);
-    console.log(yellowValue);
+
+
+        $("#wins").append(wins);
+        $("#losses").append(losses);
+    });
+
+    $("#green").on("click", function() {
+        totalScore += greenValue;
+        $("#yourscore").html(totalScore);
+
+        // var wins = "";
+        // var losses = "";
+
+        var wins = 0;
+        var losses = 0;
+        
+        // $("#wins").html(wins);
+        // $("#losses").val(losses++);
+
+        if (totalScore > randomNumber) {
+            losses++;
+            alert("you lose!");
+        }
+
+        else if (totalScore === randomNumber) {
+            wins++;
+            alert("you win!");
+        }
+        $("#wins").append(wins);
+        $("#losses").append(losses);
+    });
+
+    $("#yellow").on("click", function() {
+        totalScore += yellowValue;
+        $("#yourscore").html(totalScore);
+
+        // var wins = "";
+        // var losses = "";
+
+        var wins = 0;
+        var losses = 0;
+        
+        // $("#wins").html(wins);
+        // $("#losses").val(losses++);
+
+        if (totalScore > randomNumber) {
+            losses++;
+            alert("you lose!");
+        }
+
+        else if (totalScore === randomNumber) {
+            wins++;
+            alert("you win!");
+
+        }   
+        
+        $("#wins").append(wins);
+        $("#losses").append(losses);
+    });
+
+
+    // console.log(wins);
+    // console.log(losses);
+
+    // console.log(redValue);
+    // console.log(blueValue);
+    // console.log(greenValue);
+    // console.log(yellowValue);
 
 });
 
-
-// $("#red").on("click", function() {
-//         alert("yo");
-// })
 
     
 
